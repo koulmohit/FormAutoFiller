@@ -1,0 +1,54 @@
+function getRandom99() {
+  min = 9000000000;
+  max = 9999999999;
+  return Math.floor(Math.random() * (max - min + 1)) + min; 
+}
+
+function getRandom77() {
+  min = 7000000000;
+  max = 7777777777;
+  return Math.floor(Math.random() * (max - min + 1)) + min; 
+}
+
+function emailGeneratorUnique()
+{
+	  var strValues = "abcdefg12345";
+    var email = "";
+    var strTmp;
+    for (var i = 0; i < 10; i++) {
+        strTmp = strValues.charAt(Math.round(strValues.length * Math.random()));
+        email = email + strTmp;
+    }
+    strTmp = "";
+    email = email + "@gmail.com";
+    return email;
+}
+
+
+//will run 300 times 
+var step;
+for (step = 0; step < 300; step++)
+{
+		
+	if ((Math.floor(Math.random() * 20)%2) == 0)
+	{
+		var pi =getRandom99();
+	}
+	else 
+	{
+		var pi =getRandom77();
+	}
+	
+
+		document.getElementById("votemob").value=pi;
+		var add = emailGeneratorUnique();
+		document.getElementById("voteemail").value=add;
+
+	
+	document.getElementById("voteform").submit();
+	
+	
+	
+	window.open("https://www.timeswomensdrive.com/team/VGhlIFdhbm5hYmVz1520489378","_self")
+	console.log('Test Done Success ');
+}
